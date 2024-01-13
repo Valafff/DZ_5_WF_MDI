@@ -90,7 +90,7 @@
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(365, 50);
 			this.label2.TabIndex = 2;
-			this.label2.Text = "Время прибытия";
+			this.label2.Text = "Время прибытия до";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// lb_destenation

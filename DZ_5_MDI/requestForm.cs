@@ -27,16 +27,20 @@ namespace DZ_5_MDI
 		private void btn_search_Click(object sender, EventArgs e)
 		{
 			dataGridMain.Rows.Clear();
-			if (textBox_Destination.Text == "")
+			if (textBox_Destination.Text == "" && MainForm.buses.Count !=0)
 			{
 				addToGrid(ref MainForm.buses);
+			}
+			else if (MainForm.buses.Count == 0)
+			{
+				MessageBox.Show("Отсутствует информация о рейсах автобусов", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 			}
 			else
 			{
 				List<Bus> tempList = new List<Bus>();
 				foreach (var item in MainForm.buses)
 				{
-					if (item.Destination == textBox_Destination.Text)
+					if (item.Destination == textBox_Destination.Text && dateTimePicker_1.Value > item.ArrivalTime)
 					{
 						tempList.Add(item);
 					}

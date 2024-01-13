@@ -48,10 +48,10 @@
 			this.tb_Destenation = new System.Windows.Forms.TextBox();
 			this.dateTimePicker_ArrivalDate = new System.Windows.Forms.DateTimePicker();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.dateTimePicker_ArrivalTime = new System.Windows.Forms.DateTimePicker();
+			this.dateTimePicker_DepartureTime = new System.Windows.Forms.DateTimePicker();
 			this.cb_busType = new System.Windows.Forms.ComboBox();
 			this.saveBusCardDialog = new System.Windows.Forms.SaveFileDialog();
-			this.dateTimePicker_DepartureTime = new System.Windows.Forms.DateTimePicker();
-			this.dateTimePicker_ArrivalTime = new System.Windows.Forms.DateTimePicker();
 			this.menuStrip1.SuspendLayout();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
@@ -277,6 +277,28 @@
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(384, 157);
 			this.tableLayoutPanel1.TabIndex = 0;
 			// 
+			// dateTimePicker_ArrivalTime
+			// 
+			this.dateTimePicker_ArrivalTime.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dateTimePicker_ArrivalTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.dateTimePicker_ArrivalTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+			this.dateTimePicker_ArrivalTime.Location = new System.Drawing.Point(198, 133);
+			this.dateTimePicker_ArrivalTime.Margin = new System.Windows.Forms.Padding(0);
+			this.dateTimePicker_ArrivalTime.Name = "dateTimePicker_ArrivalTime";
+			this.dateTimePicker_ArrivalTime.Size = new System.Drawing.Size(185, 22);
+			this.dateTimePicker_ArrivalTime.TabIndex = 17;
+			// 
+			// dateTimePicker_DepartureTime
+			// 
+			this.dateTimePicker_DepartureTime.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dateTimePicker_DepartureTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.dateTimePicker_DepartureTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+			this.dateTimePicker_DepartureTime.Location = new System.Drawing.Point(198, 89);
+			this.dateTimePicker_DepartureTime.Margin = new System.Windows.Forms.Padding(0);
+			this.dateTimePicker_DepartureTime.Name = "dateTimePicker_DepartureTime";
+			this.dateTimePicker_DepartureTime.Size = new System.Drawing.Size(185, 22);
+			this.dateTimePicker_DepartureTime.TabIndex = 16;
+			// 
 			// cb_busType
 			// 
 			this.cb_busType.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -292,28 +314,6 @@
 			this.cb_busType.Name = "cb_busType";
 			this.cb_busType.Size = new System.Drawing.Size(185, 23);
 			this.cb_busType.TabIndex = 15;
-			// 
-			// dateTimePicker_DepartureTime
-			// 
-			this.dateTimePicker_DepartureTime.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dateTimePicker_DepartureTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.dateTimePicker_DepartureTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-			this.dateTimePicker_DepartureTime.Location = new System.Drawing.Point(198, 89);
-			this.dateTimePicker_DepartureTime.Margin = new System.Windows.Forms.Padding(0);
-			this.dateTimePicker_DepartureTime.Name = "dateTimePicker_DepartureTime";
-			this.dateTimePicker_DepartureTime.Size = new System.Drawing.Size(185, 22);
-			this.dateTimePicker_DepartureTime.TabIndex = 16;
-			// 
-			// dateTimePicker_ArrivalTime
-			// 
-			this.dateTimePicker_ArrivalTime.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dateTimePicker_ArrivalTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.dateTimePicker_ArrivalTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-			this.dateTimePicker_ArrivalTime.Location = new System.Drawing.Point(198, 133);
-			this.dateTimePicker_ArrivalTime.Margin = new System.Windows.Forms.Padding(0);
-			this.dateTimePicker_ArrivalTime.Name = "dateTimePicker_ArrivalTime";
-			this.dateTimePicker_ArrivalTime.Size = new System.Drawing.Size(185, 22);
-			this.dateTimePicker_ArrivalTime.TabIndex = 17;
 			// 
 			// BusCardForm
 			// 
