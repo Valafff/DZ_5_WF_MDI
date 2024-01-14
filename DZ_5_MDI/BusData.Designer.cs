@@ -322,6 +322,7 @@
 			this.ClientSize = new System.Drawing.Size(384, 181);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.menuStrip1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "BusCardForm";
 			this.Text = "Карточка автобуса";

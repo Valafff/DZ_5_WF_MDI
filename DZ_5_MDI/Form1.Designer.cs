@@ -38,6 +38,8 @@
 			this.работаСАвтобусамиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.указатьПунктНазначенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.openBusCardDialog = new System.Windows.Forms.OpenFileDialog();
+			this.сохранитьКарточкиВExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.прочитатьКарточкиИзExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -59,6 +61,8 @@
             this.открытьКарточкуАвтобусаToolStripMenuItem,
             this.сохранитьBinToolStripMenuItem,
             this.загрузитьToolStripMenuItem,
+            this.сохранитьКарточкиВExcelToolStripMenuItem,
+            this.прочитатьКарточкиИзExcelToolStripMenuItem,
             this.выходToolStripMenuItem});
 			this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
 			this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
@@ -67,14 +71,14 @@
 			// создатьToolStripMenuItem
 			// 
 			this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
-			this.создатьToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+			this.создатьToolStripMenuItem.Size = new System.Drawing.Size(359, 22);
 			this.создатьToolStripMenuItem.Text = "Создать карточку автобуса";
 			this.создатьToolStripMenuItem.Click += new System.EventHandler(this.создатьToolStripMenuItem_Click);
 			// 
 			// открытьКарточкуАвтобусаToolStripMenuItem
 			// 
 			this.открытьКарточкуАвтобусаToolStripMenuItem.Name = "открытьКарточкуАвтобусаToolStripMenuItem";
-			this.открытьКарточкуАвтобусаToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+			this.открытьКарточкуАвтобусаToolStripMenuItem.Size = new System.Drawing.Size(359, 22);
 			this.открытьКарточкуАвтобусаToolStripMenuItem.Text = "Открыть карточку автобуса";
 			this.открытьКарточкуАвтобусаToolStripMenuItem.Click += new System.EventHandler(this.открытьКарточкуАвтобусаToolStripMenuItem_Click);
 			// 
@@ -88,14 +92,14 @@
 			// загрузитьToolStripMenuItem
 			// 
 			this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-			this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+			this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(359, 22);
 			this.загрузитьToolStripMenuItem.Text = "Прочитать из файла bin";
 			this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
 			// 
 			// выходToolStripMenuItem
 			// 
 			this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-			this.выходToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+			this.выходToolStripMenuItem.Size = new System.Drawing.Size(359, 22);
 			this.выходToolStripMenuItem.Text = "Выход";
 			this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
 			// 
@@ -117,6 +121,18 @@
 			// openBusCardDialog
 			// 
 			this.openBusCardDialog.FileName = "openBusCardDialog";
+			// 
+			// сохранитьКарточкиВExcelToolStripMenuItem
+			// 
+			this.сохранитьКарточкиВExcelToolStripMenuItem.Name = "сохранитьКарточкиВExcelToolStripMenuItem";
+			this.сохранитьКарточкиВExcelToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+			this.сохранитьКарточкиВExcelToolStripMenuItem.Text = "Сохранить карточки в Excel";
+			// 
+			// прочитатьКарточкиИзExcelToolStripMenuItem
+			// 
+			this.прочитатьКарточкиИзExcelToolStripMenuItem.Name = "прочитатьКарточкиИзExcelToolStripMenuItem";
+			this.прочитатьКарточкиИзExcelToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+			this.прочитатьКарточкиИзExcelToolStripMenuItem.Text = "Прочитать карточки из Excel";
 			// 
 			// MainForm
 			// 
@@ -147,6 +163,8 @@
 		private System.Windows.Forms.ToolStripMenuItem указатьПунктНазначенияToolStripMenuItem;
 		private System.Windows.Forms.OpenFileDialog openBusCardDialog;
 		private System.Windows.Forms.ToolStripMenuItem открытьКарточкуАвтобусаToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem сохранитьКарточкиВExcelToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem прочитатьКарточкиИзExcelToolStripMenuItem;
 	}
 }
 
