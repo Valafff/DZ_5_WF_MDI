@@ -157,7 +157,7 @@ namespace DZ_5_MDI
 			//Очистка списка автобусов
 			buses.Clear();
 			//Закрытие всех активных форм в родительской MDI форме 
-			while (MdiChildren.Count()>0)
+			while (MdiChildren.Count() > 0)
 			{
 				MdiChildren[0].Close();
 			}
@@ -194,9 +194,104 @@ namespace DZ_5_MDI
 			}
 			catch (System.Exception)
 			{
-
 				MessageBox.Show("Ошибка чтения файла", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
+		}
+
+		private void сохранитьКарточкиВExcelToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+
+			Book book = new XmlBook();
+			Sheet sheet = book.addSheet("Buses");
+			try
+			{
+				sheet.writeStr(1, 0, "Номер автобуса");
+				sheet.writeStr(1, 1, "Тип автобуса");
+				sheet.writeStr(1, 2, "Пункт назначения");
+				sheet.writeStr(1, 3, "Дата отправления");
+				sheet.writeStr(1, 4, "Время отправления");
+				sheet.writeStr(1, 5, "Дата прибытия");
+				sheet.writeStr(1, 6, "Время прибытия");
+
+				for (int i = 0; i < buses.Count; i++)
+				{
+					sheet.writeNum(i + 2, 0, buses[i].BusNumber);
+					sheet.writeStr(i + 2, 1, buses[i].BusType);
+					sheet.writeStr(i + 2, 2, buses[i].Destination);
+					sheet.writeStr(i + 2, 3, buses[i].DepartureDate.ToShortDateString());
+					sheet.writeStr(i + 2, 4, buses[i].TimeDeparture.ToShortTimeString());
+					sheet.writeStr(i + 2, 5, buses[i].ArrivalDate.ToShortDateString());
+					sheet.writeStr(i + 2, 6, buses[i].ArrivalTime.ToShortTimeString());
+
+					//sheet.writeStr(i + 2, 3, buses[i].DepartureDate.ToString());
+					//sheet.writeStr(i + 2, 4, buses[i].TimeDeparture.ToString());
+					//sheet.writeStr(i + 2, 5, buses[i].ArrivalDate.ToString());
+					//sheet.writeStr(i + 2, 6, buses[i].ArrivalTime.ToString());
+				}
+				book.save("Data.xlsx");
+				MessageBox.Show("Данные записаны в Excel файл");
+			}
+			catch (System.Exception)
+			{
+
+				MessageBox.Show("Данные не записаны", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+
+		}
+
+		private void прочитатьКарточкиИзExcelToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			//Очистка списка автобусов
+			buses.Clear();
+			//Закрытие всех активных форм в родительской MDI форме 
+			while (MdiChildren.Count() > 0)
+			{
+				MdiChildren[0].Close();
+			}
+
+			Book book = new XmlBook();
+
+			try
+			{
+				book.load("Data.xlsx");
+				Sheet sheet = book.getSheet(0);
+				if (sheet != null)
+				{
+
+					for (int row = sheet.firstRow()+2; row < sheet.lastRow(); row++)
+					{
+
+						BusCardForm bc = new BusCardForm();
+						bc.maskedTextBox_BusName.Text = sheet.readStr(row, 0);					
+						bc.cb_busType.Text = sheet.readStr(row, 1);
+						bc.tb_Destenation.Text = sheet.readStr(row, 2);
+						bc.dateTimePicker_DepartureDate.Text = sheet.readStr(row, 3);
+						bc.dateTimePicker_DepartureTime.Text = sheet.readStr(row, 4);
+						bc.dateTimePicker_ArrivalDate.Text = sheet.readStr(row, 5);
+						bc.dateTimePicker_ArrivalTime.Text = sheet.readStr(row, 6);
+						bc.MdiParent = this;
+						bc.Show();
+
+						Bus temp = new Bus();
+						temp.BusNumber = Convert.ToInt32(bc.maskedTextBox_BusName.Text);
+						temp.BusType = bc.cb_busType.Text;
+						temp.Destination = bc.tb_Destenation.Text;
+						temp.DepartureDate = bc.dateTimePicker_DepartureDate.Value;
+						temp.TimeDeparture = bc.dateTimePicker_DepartureTime.Value;
+						temp.ArrivalDate = bc.dateTimePicker_ArrivalDate.Value;
+						temp.ArrivalTime = bc.dateTimePicker_ArrivalTime.Value;
+						buses.Add(temp);
+					}
+					LayoutMdi(MdiLayout.TileVertical);
+				}
+
+			}
+			catch (System.Exception)
+			{
+
+				MessageBox.Show("Данные не прочитаны", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+
 		}
 	}
 
