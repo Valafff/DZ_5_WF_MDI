@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Runtime.Serialization.Formatters.Binary;
 using libxl;
 using System.Linq;
+using System.Data.OleDb;
 
 namespace DZ_5_MDI
 {
@@ -291,6 +292,89 @@ namespace DZ_5_MDI
 
 				MessageBox.Show("Данные не прочитаны", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
+
+		}
+		private string pass;
+		public void setPass(string p)
+		{
+			pass = p;
+		}
+
+		private void записатьДанныеВDBAccessToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			//При создании новой формы передаю ссылку через аргумент на форму, которая будет принимать данные
+			PassForm passForm = new PassForm(this);
+			passForm.ShowDialog();
+			DB_Using dB_Using = new DB_Using();
+			//MessageBox.Show(pass);
+			bool test = dB_Using.Connect(pass);
+			if (test) { MessageBox.Show("Пароль принят. Соединение установлено."); }
+			else
+			{
+				MessageBox.Show("Соединение не установлено");
+			}
+			try
+			{
+				dB_Using.reWriteDB(buses);
+				MessageBox.Show("Данные записаны");
+			}
+			catch (System.Exception)
+			{
+
+				MessageBox.Show("Данные не записаны");
+			}
+			dB_Using.Disconnect();
+
+	
+
+
+		}
+
+		private void прочитатьИзDBAccessToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			PassForm passForm = new PassForm(this);
+			passForm.ShowDialog();
+			DB_Using dB_Using = new DB_Using();
+			bool test = dB_Using.Connect(pass);
+			if (test) { MessageBox.Show("Пароль принят. Соединение установлено."); }
+			else
+			{
+				MessageBox.Show("Соединение не установлено");
+			}
+
+			try
+			{
+				buses.Clear();
+				buses = dB_Using.readFromDB();
+				MessageBox.Show("Данные прочитаны");
+
+				while (MdiChildren.Count() > 0)
+				{
+					MdiChildren[0].Close();
+				}
+
+				foreach (var bus in buses)
+				{
+					BusCardForm bc = new BusCardForm();
+					bc.maskedTextBox_BusName.Text = bus.BusNumber.ToString();
+					bc.cb_busType.Text = bus.BusType.ToString();
+					bc.tb_Destenation.Text = bus.Destination.ToString();
+					bc.dateTimePicker_DepartureDate.Value = bus.DepartureDate;
+					bc.dateTimePicker_DepartureTime.Value = bus.TimeDeparture;
+					bc.dateTimePicker_ArrivalDate.Value = bus.ArrivalDate;
+					bc.dateTimePicker_ArrivalTime.Value = bus.ArrivalTime;
+					bc.MdiParent = this;
+					bc.Show();
+				}
+				LayoutMdi(MdiLayout.TileVertical);
+
+			}
+			catch (System.Exception)
+			{
+
+				MessageBox.Show("Данные не прочитаны");
+			}
+			dB_Using.Disconnect();
 
 		}
 	}

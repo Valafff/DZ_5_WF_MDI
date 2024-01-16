@@ -32,10 +32,16 @@
 			this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.создатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.открытьКарточкуАвтобусаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.сохранитьBinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.загрузитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.сохранитьКарточкиВExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.прочитатьКарточкиИзExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+			this.записатьДанныеВDBAccessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.прочитатьИзDBAccessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
 			this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.работаСАвтобусамиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.указатьПунктНазначенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,10 +65,16 @@
 			this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.создатьToolStripMenuItem,
             this.открытьКарточкуАвтобусаToolStripMenuItem,
+            this.toolStripSeparator1,
             this.сохранитьBinToolStripMenuItem,
             this.загрузитьToolStripMenuItem,
+            this.toolStripSeparator2,
             this.сохранитьКарточкиВExcelToolStripMenuItem,
             this.прочитатьКарточкиИзExcelToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.записатьДанныеВDBAccessToolStripMenuItem,
+            this.прочитатьИзDBAccessToolStripMenuItem,
+            this.toolStripSeparator4,
             this.выходToolStripMenuItem});
 			this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
 			this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
@@ -71,49 +83,83 @@
 			// создатьToolStripMenuItem
 			// 
 			this.создатьToolStripMenuItem.Name = "создатьToolStripMenuItem";
-			this.создатьToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+			this.создатьToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
 			this.создатьToolStripMenuItem.Text = "Создать карточку автобуса";
 			this.создатьToolStripMenuItem.Click += new System.EventHandler(this.создатьToolStripMenuItem_Click);
 			// 
 			// открытьКарточкуАвтобусаToolStripMenuItem
 			// 
 			this.открытьКарточкуАвтобусаToolStripMenuItem.Name = "открытьКарточкуАвтобусаToolStripMenuItem";
-			this.открытьКарточкуАвтобусаToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+			this.открытьКарточкуАвтобусаToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
 			this.открытьКарточкуАвтобусаToolStripMenuItem.Text = "Открыть карточку автобуса";
 			this.открытьКарточкуАвтобусаToolStripMenuItem.Click += new System.EventHandler(this.открытьКарточкуАвтобусаToolStripMenuItem_Click);
+			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(300, 6);
 			// 
 			// сохранитьBinToolStripMenuItem
 			// 
 			this.сохранитьBinToolStripMenuItem.Name = "сохранитьBinToolStripMenuItem";
-			this.сохранитьBinToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+			this.сохранитьBinToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
 			this.сохранитьBinToolStripMenuItem.Text = "Сохранить карточки автобусов в bin";
 			this.сохранитьBinToolStripMenuItem.Click += new System.EventHandler(this.сохранитьBinToolStripMenuItem_Click);
 			// 
 			// загрузитьToolStripMenuItem
 			// 
 			this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-			this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+			this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
 			this.загрузитьToolStripMenuItem.Text = "Прочитать из файла bin";
 			this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
+			// 
+			// toolStripSeparator2
+			// 
+			this.toolStripSeparator2.Name = "toolStripSeparator2";
+			this.toolStripSeparator2.Size = new System.Drawing.Size(300, 6);
 			// 
 			// сохранитьКарточкиВExcelToolStripMenuItem
 			// 
 			this.сохранитьКарточкиВExcelToolStripMenuItem.Name = "сохранитьКарточкиВExcelToolStripMenuItem";
-			this.сохранитьКарточкиВExcelToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+			this.сохранитьКарточкиВExcelToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
 			this.сохранитьКарточкиВExcelToolStripMenuItem.Text = "Сохранить карточки в Excel";
 			this.сохранитьКарточкиВExcelToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКарточкиВExcelToolStripMenuItem_Click);
 			// 
 			// прочитатьКарточкиИзExcelToolStripMenuItem
 			// 
 			this.прочитатьКарточкиИзExcelToolStripMenuItem.Name = "прочитатьКарточкиИзExcelToolStripMenuItem";
-			this.прочитатьКарточкиИзExcelToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+			this.прочитатьКарточкиИзExcelToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
 			this.прочитатьКарточкиИзExcelToolStripMenuItem.Text = "Прочитать карточки из Excel";
 			this.прочитатьКарточкиИзExcelToolStripMenuItem.Click += new System.EventHandler(this.прочитатьКарточкиИзExcelToolStripMenuItem_Click);
+			// 
+			// toolStripSeparator3
+			// 
+			this.toolStripSeparator3.Name = "toolStripSeparator3";
+			this.toolStripSeparator3.Size = new System.Drawing.Size(300, 6);
+			// 
+			// записатьДанныеВDBAccessToolStripMenuItem
+			// 
+			this.записатьДанныеВDBAccessToolStripMenuItem.Name = "записатьДанныеВDBAccessToolStripMenuItem";
+			this.записатьДанныеВDBAccessToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
+			this.записатьДанныеВDBAccessToolStripMenuItem.Text = "Записать данные в DB Access(пароль 123)";
+			this.записатьДанныеВDBAccessToolStripMenuItem.Click += new System.EventHandler(this.записатьДанныеВDBAccessToolStripMenuItem_Click);
+			// 
+			// прочитатьИзDBAccessToolStripMenuItem
+			// 
+			this.прочитатьИзDBAccessToolStripMenuItem.Name = "прочитатьИзDBAccessToolStripMenuItem";
+			this.прочитатьИзDBAccessToolStripMenuItem.Size = new System.Drawing.Size(318, 22);
+			this.прочитатьИзDBAccessToolStripMenuItem.Text = "Прочитать данные из DB Access(пароль 123)";
+			this.прочитатьИзDBAccessToolStripMenuItem.Click += new System.EventHandler(this.прочитатьИзDBAccessToolStripMenuItem_Click);
+			// 
+			// toolStripSeparator4
+			// 
+			this.toolStripSeparator4.Name = "toolStripSeparator4";
+			this.toolStripSeparator4.Size = new System.Drawing.Size(300, 6);
 			// 
 			// выходToolStripMenuItem
 			// 
 			this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-			this.выходToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+			this.выходToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
 			this.выходToolStripMenuItem.Text = "Выход";
 			this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
 			// 
@@ -167,6 +213,12 @@
 		private System.Windows.Forms.ToolStripMenuItem открытьКарточкуАвтобусаToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem сохранитьКарточкиВExcelToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem прочитатьКарточкиИзExcelToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem прочитатьИзDBAccessToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem записатьДанныеВDBAccessToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
 	}
 }
 
